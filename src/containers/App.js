@@ -1,29 +1,18 @@
 'use strict';
 
 import React, { Component } from 'react';
-import NewSurvey from '../components/NewSurvey';
-import YourSurveys from '../components/YourSurveys';
-
-var surveys = [
-  {
-    title: 'Stub Survey'
-  },
-  {
-    title: 'Stub Survey 2'
-  }
-];
+import { Link } from 'react-router';
 
 export default class App extends Component {
   render() {
     return (
-      <div className="row">
-        <div className="eight columns">
-          <NewSurvey />
-        </div>
-        <div className="four columns">
-          <YourSurveys surveys={surveys} />
-        </div>
+      <div>
+        <ul className="navigation-menu">
+          <li className="navigation-item"><Link to='/'>Your Surveys</Link></li>
+          <li className="navigation-item"><Link to='/survey-builder'>Survey Builder</Link></li>
+        </ul>
+        {this.props.children}
       </div>
     );
   }
-};
+}

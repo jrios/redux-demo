@@ -3,7 +3,7 @@
 import React, { Component, PropTypes } from 'react';
 
 class NewSurvey extends Component {
-  createNewSurvey(event) {
+  createNewSurvey() {
     var surveyTitle = React.findDOMNode(this.refs.surveyTitle).value;
     console.log('creating new survey ' + surveyTitle);
   }

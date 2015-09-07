@@ -11,7 +11,8 @@ new WebpackDevServer(webpack(config), {
   stats: {
     colors: true
   },
-  contentBase: 'src'
+  contentBase: 'src',
+  historyApiFallback: false
 }).listen(3000, 'localhost', function serverStart (err) {
   if(err) {
     console.log(err);
