@@ -13,10 +13,10 @@ new WebpackDevServer(webpack(config), {
   },
   contentBase: 'src',
   historyApiFallback: false
-}).listen(3000, 'localhost', function serverStart (err) {
+}).listen(8000, 'localhost', function serverStart (err) {
   if(err) {
     console.log(err);
   }
 
-  console.log('Listening at localhost:3000');
+  console.log('Listening at localhost:8000');
 });

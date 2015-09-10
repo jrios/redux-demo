@@ -4,8 +4,10 @@ import React, { Component, PropTypes } from 'react';
 
 class NewSurvey extends Component {
   createNewSurvey() {
-    var surveyTitle = React.findDOMNode(this.refs.surveyTitle).value;
-    console.log('creating new survey ' + surveyTitle);
+    var node = React.findDOMNode(this.refs.surveyTitle);
+    var surveyTitle = node.value;
+    this.props.onSurveyCreated(surveyTitle);
+    node.value = '';
   }
 
   render() {
@@ -18,5 +20,9 @@ class NewSurvey extends Component {
     );
   }
 }
+
+NewSurvey.propTypes = {
+  onSurveyCreated: PropTypes.func.isRequired
+};
 
 export default NewSurvey;

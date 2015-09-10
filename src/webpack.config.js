@@ -6,7 +6,7 @@ var path = require('path');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:8000',
     'webpack/hot/only-dev-server',
     './src/index'
   ],
